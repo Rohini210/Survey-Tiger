@@ -2,7 +2,7 @@
     "name": "survey-tiger",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://rohini210.github.io/Survey-Tiger",
+    "homepage": "https://rohini210.github.io/Survey-Tiger",
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",

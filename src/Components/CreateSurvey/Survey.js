@@ -1,9 +1,10 @@
 import React, { useState, Fragment } from "react"
+import _create_survey from "./_create_survey.css"
 
 const Survey = (props) => {
   const [surveyType, setSurveyType] = useState("defaultValue")
   const [options, setOptions] = useState([{ value: "", id: Date.now() }])
-  const [question, setQuestions] = useState('');
+  // const [question, setQuestions] = useState('');
 
   const onAddItem = () => {
     //add{value : '', id:Date.now()} to the existing options ARRAY
@@ -32,6 +33,10 @@ const Survey = (props) => {
     setOptions(updatedOptions);
   }
 
+  const addSurvey = () => {
+    
+  }
+
   return (
     <Fragment>
 
@@ -55,12 +60,13 @@ const Survey = (props) => {
             type="text"
             placeholder="Enter your question here"
             className="question-container"
-            value={question}
+            value={props.question}
             onChange={(evt) => {
-            {setQuestions(evt.target.value)}
+              props.setQuestions(evt.target.value);
             }} />
-          
-          <p>Options</p>
+          <br></br>
+          <br></br>
+          <span>Options</span>
 
           {options.map((option) => (
             <div className="answer-container" key={"option.id"}>
@@ -71,17 +77,17 @@ const Survey = (props) => {
                 onChange={(evt) => {
                   onAddAnswer(evt.target.value, option.id)
                 }}
-              />
-              <p onClick={onAddItem}>➕</p>
-              <p onClick={() => {
-                onRemoveItem(option.id)
-              }}>➖</p>
+              />              
+                <span onClick={onAddItem}>➕</span>
+                <span onClick={() => {
+                  onRemoveItem(option.id)
+                  }}>➖</span>              
             </div>
           ))}
 
           {(surveyType === 'multi' && options.length >= 4) || (surveyType === 'single' && options.length === 2)?
           ( <div>
-            <button>Add Question</button>
+            <button onClick={addSurvey}>Add Question</button>
             <button>Publish</button>
           </div>) : null}
         </div>

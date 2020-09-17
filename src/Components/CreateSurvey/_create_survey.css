@@ -39,6 +39,7 @@
     padding: 5px;
     margin: 20px;
     background: rgb(233, 229, 229);
+    cursor: pointer;
 }
 
 .survey-container span {
@@ -48,4 +49,5 @@
     border: 1px solid;
     margin: 5px;
     background: rgb(233, 229, 229);
+    cursor: pointer;
 }

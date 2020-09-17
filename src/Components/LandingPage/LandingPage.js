@@ -11,9 +11,6 @@ const LandingPage = (props) => {
 					<button className="landing-page-button"> Create Survey</button>
 				</Link>
 			</div>
-			<div>
-				<button className="landing-page-button"> Take Survey</button>
-			</div>
 		</div>
 	);
 };

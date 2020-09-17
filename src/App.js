@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
-
+import { Route, Switch} from "react-router-dom"
+import FinalPage from "./Components/CreateSurvey/FinalPage"
 import logo from './assets/images/logo.png';
-
 import LandingPage from './Components/LandingPage/LandingPage';
 import CreateSurvey from './Components/CreateSurvey/CreateSurvey';
 
 function App() {
+  
   return (
     <div className="App">
       <img src={logo} alt="logo" />
